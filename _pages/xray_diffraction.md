@@ -7,7 +7,10 @@ redirect_from:
   - /xrd.html
 ---
 
-We are developing the library **nfPhasing** that integrates data- and physics-driven methods for analysis of modern X-ray diffraction experiments  at synchrotrons like [DESY](https://desy.de) or our [HIBEF](https://www.hzdr.de/db/Cms?pOid=50566&pNid=694) beamline at [EuropeanXFEL](https://www.xfel.eu). 
+We are developing a one-step approach that inverts X-ray diffraction images in real-time during experiments at synchrotrons like [DESY](https://desy.de) or our [HIBEF](https://www.hzdr.de/db/Cms?pOid=50566&pNid=694) beamline at [EuropeanXFEL](https://www.xfel.eu). Due to the loss of phase information during the scattering process, there are multiple solutions for each diffraction pattern which is why we use the conditional Invertible Neural Network which shows all possible solutions in a probability density distribution. This approach is trained with a data-driven loss to learn a relationship between diffraction pattern and reconstructed target. The simulated training data has to be perturbed in a way that resembles the artifacts during the experiment.
+
+
+The library **nfPhasing** extends the data loss with physics-driven methods in order to refine results or iteratively reach a solution completely unsupervised. 
 
 ![nfPhasing workflow](../images/nfphasing_sketch.png)
 
